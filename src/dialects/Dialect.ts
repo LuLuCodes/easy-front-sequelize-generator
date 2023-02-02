@@ -2,7 +2,7 @@
  * @Author: leyi leyi@myun.info
  * @Date: 2023-02-02 14:47:58
  * @LastEditors: leyi leyi@myun.info
- * @LastEditTime: 2023-02-02 15:54:21
+ * @LastEditTime: 2023-02-02 16:48:57
  * @FilePath: /easy-front-sequelize-generator/src/dialects/Dialect.ts
  * @Description:
  *
@@ -230,6 +230,7 @@ export abstract class Dialect {
             schema: config.metadata!.schema,
           }),
           timestamps: config.metadata?.timestamps ?? false,
+          paranoid: config.metadata?.paranoid ?? false,
           aliasFields: config.metadata?.aliasFields ?? {},
           columns: {},
           comment: tableComment ?? undefined,
